@@ -1,3 +1,4 @@
+
 import 'dotenv/config';
 import express from 'express';
 import cors from 'cors';
@@ -10,8 +11,14 @@ api.use(express.json());
 
 addRoutes(api);
 
-const port = process.env.PORT;
+api.get('/', (req, res) => {
+    res.send({
+        mensagem: 'API do sistema de doação de leite materno funcionando!'
+    });
+});
 
-api.listen(port, () =>
-    console.log(`-> API subiu com sucesso na porta ${port}`)
-);
+const port = process.env.PORT || 3000;
+
+api.listen(port, () => {
+    console.log(`API iniciada na porta ${port}`);
+});
