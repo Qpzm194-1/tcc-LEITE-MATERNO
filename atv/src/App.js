@@ -39,6 +39,7 @@ function RealTimeMap({ points, activeIndex }) {
               </div>
             </Popup>
           </Marker>
+          
         ))}
       </MapContainer>
     </div>
