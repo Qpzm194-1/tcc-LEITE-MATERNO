@@ -1,12 +1,12 @@
-import mysql from 'mysql2/promise'
 
-const con = await mysql.createConnection({
-  host: 'localhost',
-  user: 'root',
-  database: 'tcc',
-  password: 'root'
-})
+import mysql from 'mysql2/promise';
+import 'dotenv/config';
 
-console.log('Conectou com MYSQL!');
+export const con = await mysql.createConnection({
+    host: 'localhost',
+    user: 'root',
+    password: root,
+    database: 'tcc'
+});
 
-export { con };
+console.log('Conectado ao banco de dados tcc!');
